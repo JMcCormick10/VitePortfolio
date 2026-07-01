@@ -16,6 +16,14 @@ export const useCurtainTransition = () => {
   const pendingPathRef = useRef(null);
   const displayPathRef = useRef(location.pathname);
 
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, []);
+
   const scheduleRevealReady = useCallback(() => {
     window.clearTimeout(revealTimeoutRef.current);
     revealTimeoutRef.current = window.setTimeout(() => {
@@ -49,6 +57,7 @@ export const useCurtainTransition = () => {
     }
 
     if (isTransitioningRef.current && pendingPathRef.current === location.pathname) {
+      scrollToTop();
       setDisplayLocation(location);
       setCurtainPhase("open");
       scheduleRevealReady();
@@ -64,13 +73,14 @@ export const useCurtainTransition = () => {
     window.clearTimeout(revealTimeoutRef.current);
 
     transitionTimeoutRef.current = window.setTimeout(() => {
+      scrollToTop();
       setDisplayLocation(location);
       setCurtainPhase("open");
       scheduleRevealReady();
       pendingPathRef.current = null;
       isTransitioningRef.current = false;
     }, TRANSITION_DURATION_MS);
-  }, [location, scheduleRevealReady]);
+  }, [location, scheduleRevealReady, scrollToTop]);
 
   const startNavigation = useCallback((destination) => {
     if (
