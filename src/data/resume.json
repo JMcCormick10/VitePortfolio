@@ -8,6 +8,13 @@
       "items": [
         {
           "title": "Web Developer",
+          "subTitle": "Critical Mass",
+          "startDate": "July 2021",
+          "endDate": "Present",
+          "description": "Developed vehicle configurators, a certified pre-owned page, and a dealer inventory system for a major global automotive brand with millions of daily users, while maintaining other areas of the site."
+        },
+        {
+          "title": "Web Developer",
           "subTitle": "Artifakt Digital",
           "startDate": "September 2020",
           "endDate": "July 2021",
@@ -19,13 +26,6 @@
           "startDate": "July 2017",
           "endDate": "September 2020",
           "description": "Built, maintained and updated e-commerce, non-profit, and internationally recognized brands' websites and plugins."
-        },
-        {
-          "title": "Youth Program Coordinator",
-          "subTitle": "City of Brantford",
-          "startDate": "September 2014",
-          "endDate": "November 2016",
-          "description": "Supervised and coordinated staff and participants of various youth programs in 2 city community centres."
         }
       ]
     },
