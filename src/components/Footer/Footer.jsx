@@ -1,7 +1,7 @@
 import footerData from "../../data/footer.json";
 import globalStyles from "../../styles/global.module.css";
+import BubbleButton from "../BubbleButton/BubbleButton";
 import Shape from "../Shape/Shape";
-import Form from "../Form/Form";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -21,8 +21,10 @@ const Footer = () => {
                 {footerData.titleSuffix}
               </h2>
               <p className={styles.description}>{footerData.description}</p>
+              <BubbleButton href={footerData.ctaHref} isExternal>
+                {footerData.ctaText}
+              </BubbleButton>
             </div>
-            <Form />
           </div>
           <Shape shape="square" noanimation />
         </div>

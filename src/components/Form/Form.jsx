@@ -5,12 +5,35 @@ import styles from "./Form.module.css";
 const Form = () => {
   const [focusedField, setFocusedField] = useState("");
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      form.reset();
+      setFocusedField("");
+    } catch (error) {
+      console.error("Netlify form submission failed", error);
+    }
+  };
+
   return (
     <form
       className={styles.form}
       name="contact"
       method="POST"
       data-netlify="true"
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
 

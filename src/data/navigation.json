@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "path": "/"
+    },
+    {
+      "label": "Resume",
+      "path": "/resume"
+    }
+  ]
+}

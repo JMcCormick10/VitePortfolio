@@ -21,7 +21,7 @@ const ImageContentBlock = ({ data }) => {
           className={`${styles.contentContainer} ${globalStyles.reveal} ${globalStyles.revealLeft}`}
         >
           <p>{data.copy}</p>
-          <BubbleButton href="/resume.pdf">{data.ctaText}</BubbleButton>
+          <BubbleButton href={data.ctaHref}>{data.ctaText}</BubbleButton>
         </div>
       </div>
     </section>

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import siteConfig from "../data/siteConfig.json";
 
-const TRANSITION_DURATION_MS = 1000;
+const TRANSITION_DURATION_MS = siteConfig.transitions.curtainDurationMs;
 
 export const useCurtainTransition = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ export const useCurtainTransition = () => {
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, []);
+  }, [scheduleRevealReady]);
 
   useEffect(() => {
     return () => {
@@ -69,7 +70,7 @@ export const useCurtainTransition = () => {
       pendingPathRef.current = null;
       isTransitioningRef.current = false;
     }, TRANSITION_DURATION_MS);
-  }, [location]);
+  }, [location, scheduleRevealReady]);
 
   const startNavigation = useCallback((destination) => {
     if (

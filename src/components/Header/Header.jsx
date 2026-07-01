@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import navigationData from "../../data/navigation.json";
+import siteConfig from "../../data/siteConfig.json";
 import styles from "./Header.module.css";
 import globalStyles from "../../styles/global.module.css";
 import Logo from "../Logo/Logo";
@@ -51,14 +53,21 @@ const Header = ({
         <div className={`${globalStyles.container} ${styles.container}`}>
           <Logo clicked={handleLogoClick} />
           <div className={styles.socialLinks}>
-            <IconLink url="https://www.linkedin.com/in/josh-mccormick-bb2561b5">
-              <FontAwesomeIcon icon={faLinkedinIn} />
+            <IconLink
+              url={siteConfig.socialLinks.linkedin.url}
+              label={siteConfig.socialLinks.linkedin.label}
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} aria-hidden="true" />
             </IconLink>
-            <IconLink url="https://github.com/JMcCormick10">
-              <FontAwesomeIcon icon={faGithub} />
+            <IconLink
+              url={siteConfig.socialLinks.github.url}
+              label={siteConfig.socialLinks.github.label}
+            >
+              <FontAwesomeIcon icon={faGithub} aria-hidden="true" />
             </IconLink>
           </div>
           <MobileMenu
+            items={navigationData.items}
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             startNavigation={startNavigation}

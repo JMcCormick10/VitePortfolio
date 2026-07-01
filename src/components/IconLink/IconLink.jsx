@@ -1,5 +1,7 @@
 import styles from "./IconLink.module.css";
-const IconLink = ({ children, url }) => {
+import globalStyles from "../../styles/global.module.css";
+
+const IconLink = ({ children, label, url }) => {
   return (
     <a
       href={url}
@@ -8,6 +10,7 @@ const IconLink = ({ children, url }) => {
       rel="noopener noreferrer"
     >
       {children}
+      <span className={globalStyles.srOnly}>{label}</span>
     </a>
   );
 };

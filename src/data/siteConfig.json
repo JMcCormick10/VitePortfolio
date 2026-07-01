@@ -1,0 +1,15 @@
+{
+  "socialLinks": {
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/josh-mccormick-bb2561b5",
+      "label": "Visit Josh McCormick's LinkedIn profile"
+    },
+    "github": {
+      "url": "https://github.com/JMcCormick10",
+      "label": "Visit Josh McCormick's GitHub profile"
+    }
+  },
+  "transitions": {
+    "curtainDurationMs": 1000
+  }
+}

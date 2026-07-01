@@ -6,6 +6,7 @@ const classNames = (...classes) => classes.filter(Boolean).join(" ");
 const BubbleButton = ({
   children,
   href,
+  isExternal = false,
   onClick,
   small = false,
   transparent = false,
@@ -58,6 +59,8 @@ const BubbleButton = ({
         ref={buttonRef}
         className={buttonClassName}
         href={href}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
         onFocus={onButtonFocus}
         onMouseEnter={onButtonInteract}
         onMouseMove={onButtonInteract}

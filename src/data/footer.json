@@ -1,10 +1,9 @@
 {
   "titlePrefix": "Need a",
   "titleHighlight": "website?",
-  "titleSuffix": "Send me a message",
+  "titleSuffix": "Reach out and connect!",
   "description": "I'm always looking to build new things! Whatever your idea, no matter how big or small, I want to help!",
-  "placeholderText": "Contact form placeholder",
-  "ctaText": "Email Me",
-  "ctaHref": "mailto:josh@webdevjosh.com",
+  "ctaText": "Connect",
+  "ctaHref": "https://www.linkedin.com/in/josh-mccormick-bb2561b5",
   "bottomText": "Thanks for visiting!! 🤖"
 }

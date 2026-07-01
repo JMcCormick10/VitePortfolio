@@ -2,7 +2,6 @@ import styles from "./ResumeSection.module.css";
 import globalStyles from "../../styles/global.module.css";
 import ResumeItem from "../ResumeItem/ResumeItem";
 const ResumeSection = ({ data }) => {
-  console.log(data);
   return (
     <div className={styles.resumeSection}>
       <h2 className={globalStyles.reveal}>{data.title}</h2>

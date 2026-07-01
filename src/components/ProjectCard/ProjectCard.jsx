@@ -71,12 +71,14 @@ const ProjectCard = ({ project }) => {
         <div className={styles.notification}>{notificationMessage}</div>
       ) : null}
       <div className={`${globalStyles.reveal} ${globalStyles.revealUp}`}>
-        <div
+        <button
+          type="button"
           onClick={onImageContainerClick}
           className={styles.imageContainer}
           ref={imageContainerRef}
           onMouseEnter={onImageContainerInteract}
           onMouseMove={onImageContainerInteract}
+          aria-label={link ? `Copy link for ${title}` : `No link available for ${title}`}
         >
           {imageSrc ? <img src={imageSrc} alt={imageAlt} /> : null}
           <div className={styles.previewOverlay}></div>
@@ -84,7 +86,7 @@ const ProjectCard = ({ project }) => {
             <FontAwesomeIcon icon={faEye} />
             <p className={styles.previewOverlayText}>Copy Link</p>
           </div>
-        </div>
+        </button>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         <div className={styles.mobileButtonRow}></div>

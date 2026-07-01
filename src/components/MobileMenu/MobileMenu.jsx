@@ -1,6 +1,6 @@
 import styles from "./MobileMenu.module.css";
 
-const MobileMenu = ({ menuOpen, setMenuOpen, startNavigation }) => {
+const MobileMenu = ({ items, menuOpen, setMenuOpen, startNavigation }) => {
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -15,20 +15,16 @@ const MobileMenu = ({ menuOpen, setMenuOpen, startNavigation }) => {
       <nav
         className={`${styles.mobileNav} ${menuOpen ? styles.mobileNavOpen : ""}`}
       >
-        <button
-          type="button"
-          className={styles.mobileLink}
-          onClick={() => handleMenuNavigation("/")}
-        >
-          Home
-        </button>
-        <button
-          type="button"
-          className={styles.mobileLink}
-          onClick={() => handleMenuNavigation("/resume")}
-        >
-          Resume
-        </button>
+        {items.map((item) => (
+          <button
+            key={item.path}
+            type="button"
+            className={styles.mobileLink}
+            onClick={() => handleMenuNavigation(item.path)}
+          >
+            {item.label}
+          </button>
+        ))}
       </nav>
       <button
         type="button"
