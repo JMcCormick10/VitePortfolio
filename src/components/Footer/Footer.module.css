@@ -5,6 +5,7 @@
   h2 {
     font-size: 66px;
     line-height: 79px;
+    margin-bottom: 0px;
 
     @media screen and (max-width: 767px) {
       font-size: 30px;
