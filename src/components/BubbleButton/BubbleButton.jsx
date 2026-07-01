@@ -1,7 +1,12 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import styles from "./BubbleButton.module.css";
 
 const classNames = (...classes) => classes.filter(Boolean).join(" ");
+const isInternalRoute = (href) =>
+  typeof href === "string" &&
+  href.startsWith("/") &&
+  !/\.[a-z0-9]+($|\?)/i.test(href);
 
 const BubbleButton = ({
   children,
@@ -13,7 +18,7 @@ const BubbleButton = ({
   type = "button",
 }) => {
   const buttonRef = useRef(null);
-  const Element = href ? "a" : "button";
+  const Element = href ? (isInternalRoute(href) ? Link : "a") : "button";
   const buttonClassName = classNames(
     styles.button,
     small && styles.small,
@@ -68,6 +73,22 @@ const BubbleButton = ({
         <span className={styles.title}>{children}</span>
         <span className={styles.bubble} aria-hidden="true"></span>
       </a>
+    );
+  }
+
+  if (Element === Link) {
+    return (
+      <Link
+        ref={buttonRef}
+        className={buttonClassName}
+        to={href}
+        onFocus={onButtonFocus}
+        onMouseEnter={onButtonInteract}
+        onMouseMove={onButtonInteract}
+      >
+        <span className={styles.title}>{children}</span>
+        <span className={styles.bubble} aria-hidden="true"></span>
+      </Link>
     );
   }
 
