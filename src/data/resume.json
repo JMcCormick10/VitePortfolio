@@ -75,11 +75,26 @@
         },
         {
           "title": "Development Tools",
-          "tags": ["Git", "VS Code", "XAMPP", "FTP", "Cloudflare", "WP Engine"]
+          "tags": [
+            "Git",
+            "CoPilot",
+            "VS Code",
+            "XAMPP",
+            "FTP",
+            "Cloudflare",
+            "WP Engine"
+          ]
         },
         {
           "title": "Frameworks/Libraries",
-          "tags": ["NPM", "React", "jQuery", "SASS", "Bootstrap"]
+          "tags": [
+            "NPM",
+            "React",
+            "Styled Components",
+            "NextJS",
+            "SASS",
+            "Bootstrap"
+          ]
         }
       ]
     }
