@@ -1,0 +1,17 @@
+{
+  "intro": {
+    "label": "Hi, I’m Josh.",
+    "title": "I build lightweight web experiences.",
+    "text": "I’m a web developer who values performance, clarity, and meaningful design. This portfolio is built with React, Vite, and CSS Modules."
+  },
+  "cards": [
+    {
+      "title": "Projects",
+      "body": "Modern single-page apps, portfolio websites, and UI interfaces with clean code."
+    },
+    {
+      "title": "Resume",
+      "body": "Professional experience, skills, and accomplishments—ready to share on the resume page."
+    }
+  ]
+}

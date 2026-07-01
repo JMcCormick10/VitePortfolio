@@ -1,0 +1,87 @@
+{
+  "pageTitle": "Resume",
+  "description": "Here you'll find a more extensive view of my work history and the technology I'm comfortable with.",
+  "resumeCTAText": "Download it for later",
+  "sections": [
+    {
+      "title": "Work experience 💼",
+      "items": [
+        {
+          "title": "Web Developer",
+          "subTitle": "Artifakt Digital",
+          "startDate": "September 2020",
+          "endDate": "July 2021",
+          "description": "Built, maintained, and updated luxurious, sophisticated and complex real estate websites for clients in North America"
+        },
+        {
+          "title": "Web Developer",
+          "subTitle": "Simplistics",
+          "startDate": "July 2017",
+          "endDate": "September 2020",
+          "description": "Built, maintained and updated e-commerce, non-profit, and internationally recognized brands' websites and plugins."
+        },
+        {
+          "title": "Youth Program Coordinator",
+          "subTitle": "City of Brantford",
+          "startDate": "September 2014",
+          "endDate": "November 2016",
+          "description": "Supervised and coordinated staff and participants of various youth programs in 2 city community centres."
+        }
+      ]
+    },
+    {
+      "title": "Education 🎓",
+      "items": [
+        {
+          "title": "Web Development Certificate",
+          "subTitle": "Humber College",
+          "startDate": "September 2016",
+          "endDate": "July 2017",
+          "description": "Post-graduate certificate studying all aspects of Full Stack Development from databases to front-end libraries and everything in between."
+        },
+        {
+          "title": "Exercise Science and Health Promotion",
+          "subTitle": "Sheridan College",
+          "startDate": "September 2010",
+          "endDate": "April 2014",
+          "description": "Bachelor of Applied Health Sciences focused on Exercise Physiology and general health promotion concepts."
+        }
+      ]
+    },
+    {
+      "title": "Volunteer work 💪",
+      "items": [
+        {
+          "title": "Fred Viktor",
+          "subTitle": "Capital One Digital for Good Hackathon",
+          "startDate": "November 2020",
+          "description": "Added an e-commerce shop to the existing website where users could 'purchase' supplies like hot meals and clothing for the homeless population in Toronto. This was done in 1 weekend, with 4 team members."
+        },
+        {
+          "title": "Toronto Cat Rescue",
+          "subTitle": "Capital One Digital For Good",
+          "startDate": "November 2018",
+          "description": "Created a WordPress plugin for the existing website that accessed API data on available cats to donate for display on a page of their existing website."
+        }
+      ]
+    },
+    {
+      "type": "simple",
+      "title": "Skills & Languages ⚙️",
+      "items": [
+        {
+          "title": "Programming/Database Languages",
+          "tags": ["HTML", "CSS", "Javascript", "PHP", "MySQL"]
+        },
+        {
+          "title": "Development Tools",
+          "tags": ["Git", "VS Code", "XAMPP", "FTP", "Cloudflare", "WP Engine"]
+        },
+        {
+          "title": "Frameworks/Libraries",
+          "tags": ["NPM", "React", "jQuery", "SASS", "Bootstrap"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "A little bit about me 🤔️",
+  "copy": "I've been a full stack developer for 5 years now. My first speciality was WordPress, building websites from scratch using a fully customized theme and building custom plugins. No pre-built themes. From there, I switched focus to React, and have been using tools like Gatsby, Contentful, and Node. When I'm not learning a new tech stack, you can find me lifting weights, running, or playing sports.",
+  "imageAlt": "Josh",
+  "ctaText": "View My Resume",
+  "ctaHref": "/resume",
+  "imageSrc": "me.jpg"
+}

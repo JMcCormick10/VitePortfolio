@@ -1,0 +1,116 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  .formElement {
+    position: relative;
+    margin-bottom: 25px;
+    input,
+    textarea {
+      background: #fff;
+      box-shadow: 0px 8px 54px -10px rgba(174, 208, 202, 0.5);
+      border-radius: 10px;
+      border: none;
+      width: 100%;
+      padding: 20px 10px;
+      font-size: 12px;
+      &:focus {
+        border: 2px solid var(--black);
+        outline: none;
+      }
+    }
+    input {
+      height: 60px;
+    }
+    textarea {
+      height: 150px;
+    }
+    label {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      color: #656565;
+      font-size: 15px;
+      transition: 0.3s ease-in;
+      pointer-events: none;
+    }
+    .errorMessage {
+      display: none;
+      position: absolute;
+      left: 15px;
+      bottom: -15px;
+      color: red;
+      font-size: 10px;
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+    &.focused {
+      label {
+        top: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .fullWidth,
+  .submitRow {
+    grid-column: 1 / -1;
+  }
+
+  .submitRow {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button[type="submit"] {
+    color: var(--black);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+
+    .submitText {
+      border-bottom: 1px solid var(--black);
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      margin-right: 15px;
+    }
+    svg {
+      color: var(--black);
+      position: absolute;
+      right: 0;
+      transform: rotate(45deg);
+      transition: 0.3s;
+    }
+    &[disabled] {
+      opacity: 0.5;
+      cursor: initial;
+    }
+
+    &:not([disabled]) {
+      svg {
+        animation: hoverPlane 0.7s linear 0s infinite alternate;
+      }
+    }
+    &.submitted {
+      .submit-text {
+        opacity: 0;
+      }
+
+      svg {
+        animation: flyPlane 2s linear 0.5s 1 normal forwards;
+      }
+    }
+  }
+}

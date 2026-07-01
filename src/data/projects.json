@@ -1,0 +1,36 @@
+{
+  "title": "My work 🖥️",
+  "description": "A collection of some of my past professional projects. The majority of my work in the past 5 years is for a large automobile company that I cannot share, but here are some of the projects I can share.",
+  "items": [
+    {
+      "title": "Noble",
+      "description": "An elegant sophisticated website with animations that fit for a realtor who focuses on classy, luxury homes.",
+      "imageAlt": "Noble",
+      "imagePath": "noble.png",
+      "link": "https://noblerealestate.ca/"
+    },
+    {
+      "title": "MDC",
+      "description": "A customized e-commerce website with a modified membership and login system specific to the clients' needs.",
+      "imageAlt": "MDC",
+      "imagePath": "mdc.jpeg",
+      "link": "https://mdctraining.com/"
+    },
+
+    {
+      "title": "Dave Briggs",
+      "description": "A sophisticated website with sleek animations and an imaginative loading screen.",
+      "imageAlt": "Dave Briggs",
+      "imagePath": "briggs.png",
+      "link": "https://davebriggs.ca/"
+    },
+
+    {
+      "title": "Fafard",
+      "description": "A multi-lingual flower and soil shop with a sophisticated \"Find a Retailer\" functionality.",
+      "imageAlt": "fafard2-1",
+      "imagePath": "fafard.jpeg",
+      "link": "https://www.fafard.ca/"
+    }
+  ]
+}

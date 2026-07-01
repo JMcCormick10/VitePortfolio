@@ -1,0 +1,82 @@
+.button {
+  font-family: var(--headingFont);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  border: 1px solid var(--black);
+  border-radius: 60px;
+  background: var(--black);
+  color: #fff;
+  box-shadow: 0 8px 64px -10px #aed0ca;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  overflow: hidden;
+  outline: none;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.small {
+  padding: 10px 25px;
+}
+
+.title {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease-in-out;
+}
+
+.bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--green);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.button:hover .bubble,
+.button:focus-visible .bubble {
+  width: 225%;
+  height: 562.5px;
+}
+
+.button:hover .title,
+.button:focus-visible .title {
+  color: var(--black);
+}
+
+.button:active {
+  background-color: var(--green);
+}
+
+.transparent {
+  background: transparent;
+  border-color: #eee;
+}
+
+.transparent .title {
+  color: var(--black);
+}
+
+.transparent .bubble {
+  background-color: var(--black);
+}
+
+.transparent:hover .title,
+.transparent:focus-visible .title {
+  color: #fff;
+}

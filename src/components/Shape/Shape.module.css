@@ -1,0 +1,113 @@
+.shape {
+  height: auto;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(0, 0);
+}
+
+.shapeCircle {
+  width: 250px;
+  animation: floatCircle 60s ease-in-out 0s infinite alternate;
+}
+
+.shapeDonut {
+  width: 250px;
+  animation: floatCircle 78s ease-in-out 4s infinite alternate-reverse;
+}
+
+.shapeSquare {
+  width: 150px;
+  animation: floatSquare 56s ease-in-out 2.5s infinite alternate;
+}
+
+.shapePyramid {
+  width: 150px;
+  animation: floatSquare 72s ease-in-out 1.5s infinite alternate-reverse;
+}
+
+.shapeRectangle {
+  width: 100px;
+  animation: floatRectangle 58s ease-in-out 2s infinite alternate;
+}
+
+.shapeCylinder {
+  width: 100px;
+  animation: floatRectangle 74s ease-in-out 5s infinite alternate-reverse;
+}
+
+.noAnimation {
+  animation: unset;
+}
+
+@keyframes floatCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+  17% {
+    transform: translate(36px, -22px);
+  }
+  34% {
+    transform: translate(-28px, 34px);
+  }
+  51% {
+    transform: translate(18px, 46px);
+  }
+  68% {
+    transform: translate(-42px, -14px);
+  }
+  85% {
+    transform: translate(24px, -38px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatSquare {
+  0% {
+    transform: translate(0, 0);
+  }
+  17% {
+    transform: translate(-32px, 26px);
+  }
+  34% {
+    transform: translate(22px, -36px);
+  }
+  51% {
+    transform: translate(44px, 18px);
+  }
+  68% {
+    transform: translate(-18px, -28px);
+  }
+  85% {
+    transform: translate(30px, 40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floatRectangle {
+  0% {
+    transform: translate(0, 0);
+  }
+  17% {
+    transform: translate(20px, -30px);
+  }
+  34% {
+    transform: translate(-38px, 16px);
+  }
+  51% {
+    transform: translate(28px, 34px);
+  }
+  68% {
+    transform: translate(-14px, -42px);
+  }
+  85% {
+    transform: translate(40px, -12px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

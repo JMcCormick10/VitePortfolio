@@ -1,0 +1,24 @@
+.resumeItem {
+  h3 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+
+  p:last-of-type {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+
+  .tagList {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 0px;
+
+    span {
+      margin: 2px 1px;
+    }
+  }
+}

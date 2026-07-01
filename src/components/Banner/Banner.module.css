@@ -1,0 +1,27 @@
+.banner {
+  text-align: center;
+
+  .textContainer {
+    max-width: 800px;
+  }
+
+  h1 {
+    margin: 20px 0;
+  }
+  [alt="circle"] {
+    position: absolute;
+    right: 100px;
+    top: 30%;
+  }
+  [alt="square"] {
+    position: absolute;
+
+    left: 10%;
+    top: 50%;
+  }
+  [alt="rectangle"] {
+    position: absolute;
+    left: 5%;
+    top: 30%;
+  }
+}

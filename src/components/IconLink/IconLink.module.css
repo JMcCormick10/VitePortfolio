@@ -1,0 +1,23 @@
+.iconLink {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  height: 27px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    color: var(--black);
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color: var(--black);
+    svg {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.resumeSection {
+  padding: 25px 0;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #d6e3dd;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+.resumeItemRow {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}

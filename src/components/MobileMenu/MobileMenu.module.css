@@ -1,0 +1,78 @@
+.mobileNav {
+  position: fixed;
+  top: 50dvh;
+  left: 50vw;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, calc(-50% - 15px));
+  transition: 0.4s ease-in;
+  pointer-events: none;
+}
+
+.mobileNavOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  transition-delay: 1s;
+}
+
+.mobileLink {
+  border: none;
+  background: transparent;
+  color: var(--black);
+  font-family: var(--heading-font);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  padding: 0;
+  position: relative;
+  width: 50px;
+  z-index: 1002;
+
+  span {
+    background: var(--black);
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition: 0.3s;
+    width: 50px;
+
+    &:first-of-type {
+      left: 0;
+      top: 14px;
+    }
+
+    &:last-of-type {
+      right: 0;
+      top: 20px;
+      width: 35px;
+    }
+  }
+}
+
+.menuActive {
+  span:first-of-type {
+    transform: rotate(45deg);
+  }
+
+  span:last-of-type {
+    width: 50px;
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+}

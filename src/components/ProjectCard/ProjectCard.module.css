@@ -1,0 +1,111 @@
+.projectCard {
+  position: relative;
+}
+
+.notification {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  z-index: 3;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--black);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.imageContainer {
+  cursor: pointer;
+  height: 325px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    border-radius: 20px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.previewOverlay {
+  opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--black);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.35s ease-in-out,
+    height 0.35s ease-in-out;
+}
+
+.previewOverlayContent {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+
+  svg {
+    font-size: 25px;
+  }
+}
+
+.previewOverlayText {
+  color: #939393;
+  font-size: 12px;
+}
+
+.imageContainer:hover .previewOverlay,
+.imageContainer:focus-visible .previewOverlay {
+  width: 180%;
+  height: 180%;
+}
+
+.imageContainer:hover .previewOverlayContent,
+.imageContainer:focus-visible .previewOverlayContent {
+  opacity: 1;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: 15px;
+}
+
+.mobileButtonRow {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .mobileButtonRow {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imageContainer img {
+    height: 280px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

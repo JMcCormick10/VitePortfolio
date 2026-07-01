@@ -1,0 +1,16 @@
+.heading {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 30px 15px;
+  margin-top: 42px;
+}
+
+@media screen and (max-width: 615px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

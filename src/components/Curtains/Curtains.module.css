@@ -1,0 +1,73 @@
+.curtain {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  background: #000;
+  z-index: 999;
+  pointer-events: none;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out 0.5s;
+}
+
+.logoLockup {
+  font-family: var(--heading-font);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  width: 42px;
+  color: var(--black);
+  display: block;
+  transform: translateY(-50%);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.hiddenLockup {
+  opacity: 0;
+}
+
+.logoLockup span:first-of-type {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.logoLockup span:last-of-type {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  display: block;
+}
+
+.leftCurtain {
+  left: 0;
+  transform: translateX(0);
+  background: var(--green);
+}
+
+.leftCurtain .logoLockup {
+  right: -21px;
+}
+
+.rightCurtain {
+  right: 0;
+  transform: translateX(0);
+  background: var(--green);
+}
+
+.rightCurtain .logoLockup {
+  left: -21px;
+}
+
+.leftCurtain.open {
+  transform: translateX(-100%);
+}
+
+.rightCurtain.open {
+  transform: translateX(100%);
+}
